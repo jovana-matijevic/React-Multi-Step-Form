@@ -1,0 +1,43 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.onOff {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #002a77;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.onOff:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+input:checked + .onOff {
+  background-color: #7e9cd4;
+}
+
+input:checked + .onOff:before {
+  transform: translateX(26px);
+}
